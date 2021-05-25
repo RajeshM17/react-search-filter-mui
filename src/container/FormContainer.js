@@ -94,25 +94,25 @@ function FormContainer() {
         >
           <MenuItem value=""></MenuItem>
           <MenuItem value="true">Married</MenuItem>
-          <MenuItem value="False">Unmarried</MenuItem>
+          <MenuItem value="false">Unmarried</MenuItem>
         </Select>
       </FormControl>
 
       <Button
         variant="outlined"
         color="primary"
-        onClick={(event) => {
-          console.log(genderTerm);
+        type="reset"
+        text="reset"
+        title={'Clear'}
+        onClick={() => {
           setSearchTerm('');
           setAgeTerm('');
           setGenderTerm('');
           setMarriedTerm('');
-          console.log(genderTerm);
         }}
       >
         Reset
       </Button>
-
       <Datatable data={searchResults} />
     </FormControl>
   );

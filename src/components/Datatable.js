@@ -21,7 +21,7 @@ export default function Datatable({ data }) {
           <TableRow>
             {columns.map((column) => (
               <TableCell>
-                {column === 'isMarried'
+                {column == 'isMarried'
                   ? row.isMarried
                     ? 'Married'
                     : 'Unmarried'
