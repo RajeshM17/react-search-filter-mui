@@ -52,7 +52,7 @@ export default function CustomizedMenus(props) {
   };
   
   return (
-    <div style={{ float: 'right', margin: '20px 20px 0px 0px' }}>
+    <div style={{ float: 'right'}}>
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
@@ -79,7 +79,7 @@ export default function CustomizedMenus(props) {
           <ListItemIcon>
             <DraftsIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary={props.networkName} />
+          <ListItemText primary={props.network} />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>

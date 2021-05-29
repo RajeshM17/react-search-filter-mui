@@ -2,7 +2,6 @@ import data from '../data/MOCK_DATA.json';
 import React, { useState, useEffect } from 'react';
 import inRange from '../utils/range';
 import Datatable from '../components/Datatable';
-
 import {
   Select,
   Input,
@@ -35,7 +34,9 @@ function FormContainer() {
         maximum = 150;
       }
       return (
-        person.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        person.name
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) &&
         person.age >= minimum &&
         person.age <= maximum &&
         person.gender
@@ -50,6 +51,7 @@ function FormContainer() {
   }, [searchTerm, marriedTerm, genderTerm, ageTerm]);
 
   return (
+    <>
     <FormControl>
       <Input
         type="text"
@@ -82,7 +84,6 @@ function FormContainer() {
           <MenuItem value=""></MenuItem>
           <MenuItem value="Male">Male</MenuItem>
           <MenuItem value="Female">Female</MenuItem>
-          <MenuItem value="Others">Others</MenuItem>
         </Select>
       </FormControl>
       <FormControl>
@@ -102,19 +103,19 @@ function FormContainer() {
         variant="outlined"
         color="primary"
         type="reset"
-        text="reset"
-        title={'Clear'}
+        text="Reset"
         onClick={() => {
-          setSearchTerm('');
-          setAgeTerm('');
-          setGenderTerm('');
-          setMarriedTerm('');
+          setSearchTerm(``);
+          setAgeTerm(``);
+          setGenderTerm(``);
+          setMarriedTerm(``);
         }}
       >
-        Reset
+      Reset
       </Button>
-      <Datatable data={searchResults} />
     </FormControl>
+    <Datatable data={searchResults} />
+    </>
   );
 }
 export default FormContainer;

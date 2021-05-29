@@ -1,36 +1,32 @@
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableRow,
-  TableCell,
-} from '@material-ui/core';
+import { DataGrid } from '@material-ui/data-grid';
 
-export default function Datatable({ data }){
-  const columns = data[0] && Object.keys(data[0]);
+const columns = [
+  { field: 'id', headerName: 'ID', width: 100 },
+  { field: 'name', headerName: 'Name', width: 150 },
+  {
+    field: 'age',
+    headerName: 'Age',
+    type: 'number',
+    width: 110,
+  },
+
+  {
+    field: 'isMarried',
+    headerName: 'Married Status',
+    type:'boolean',
+    width: 180,
+  },
+  {
+    field: 'gender',
+    headerName: 'Gender',
+    width: 150,
+  },
+];
+
+export default function Datatable({ data }) {
   return (
-    <Table border="1" cellPadding={5} cellSpacing={1}>
-      <TableHead>
-        <TableRow>
-          {data[0] &&
-            columns.map((heading) => <th>{heading.toUpperCase()}</th>)}
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {data.map((row) => (
-          <TableRow>
-            {columns.map((column) => (
-              <TableCell>
-                {column == 'isMarried'
-                  ? row.isMarried
-                    ? 'Married'
-                    : 'Unmarried'
-                  : row[column]}
-              </TableCell>
-            ))}
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <div style={{ height:400, width: '100%' }}>
+      <DataGrid rows={data} columns={columns} pageSize={10}  pagination {...data}   />
+    </div>
   );
 }
