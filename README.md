@@ -1,70 +1,132 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h1 align="center">react-search-filter-mui</h1>
 
-In the project directory, you can run:
+ <p align="center">
+ 	
+	React Search Filter with Pagination
+    <br />
+	
+    <a href="https://github.com/RajeshM17/react-search-filter-mui">View Demo</a>
+    
 
-### `npm start`
+    <a href="https://github.com/RajeshM17/react-search-filter-mui/issues">Report Bug</a>
+    
+	
+    <a href="https://github.com/RajeshM17/react-search-filter-mui/issues">Request Feature</a>
+  </p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+[![Status](https://img.shields.io/badge/react-search-filter-mui-Live-success?style=for-the-badge)](https://your-live-project-link.com)
+![Status](https://img.shields.io/badge/status-active-success.svg?style=for-the-badge)
+[![GitHub issues](https://img.shields.io/github/issues/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/issues)
+[![GitHub forks](https://img.shields.io/github/forks/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/network)
+[![GitHub stars](https://img.shields.io/github/stars/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/stargazers)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/RajeshM17/react-search-filter-mui?style=for-the-badge)
+[![GitHub license](https://img.shields.io/github/license/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<hr />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+React search filter and pagination with Material-UI
+</p>
 
-### `npm run eject`
+## 🧐About
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React search filter and pagination with Material-UI
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💡Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. [Fetching Dynamic data from .json file]()
+2. [Multiple Filters and displaying data according to filter]()
+3. [Pagination]()
+4. [Detection of Installation of Metamask Wallet]()
+5. [Fetching data from wallet such as Account Balance, Name of Network etc.]()
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ⛏️Built with
 
-## Learn More
+-   [ReactJS]()
+-   [Material-UI]()
+-   [Metamask Wallet]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🏁Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+These instructions will help you to setup your own copy of react-search-filter-mui on your local machine for development and testing purposes. See [deployment](#Deployment) for notes on how to deploy the project on a live system.
 
-### Code Splitting
+### 📚Prerequisite
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-   [Node]()
+-   [NPM]()
 
-### Analyzing the Bundle Size
+### 🧰Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. [Clone this repo]()
+2. [Install all the dependencies]()
 
-### Making a Progressive Web App
+    ```bash
+    $npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. `$npm start`
 
-### Advanced Configuration
+## 🚀Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. [Create a new repo]()
+1. [Push your code to it]()
+3. [Create New Project on your [Vercel Dashboard](https://vercel.com/dashboard)]()
+4. [Import your Git Repository]()
+5. [After successful import, changes made to the Production Branch (commonly "main/master") will be a Production Deployment and rest all branches will generate Preview Deployments]()
+6. [Once deployed, you will get a URL for your live app, such as: `https://xyz.vercel.app`]()
 
-### Deployment
+## 📝Todo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-   [Adding styles]()
+-   [Making reusable components]()
 
-### `npm run build` fails to minify
+## 📈Future Plans
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   [Making it a Dapp]()
+
+
+
+## ✍️Authors
+
+
+
+-   [@author_name](profile link) 
+
+## 📖Contributing
+
+
+
+**_"In real open source, you have the right to control your own destiny."_** _- Linus Torvalds_
+
+Contributions are what make the open source community an amazing place. Any contributions you make are **greatly appreciated**.
+
+## 📢Contributors
+
+-   [@ameesha_agrawal]()
+-   [@vaishali_purohit]()
+
+## 💳License
+
+Distributed under the MIT License. See [`LICENSE`](LICENCE) for more information.
+
+## 🧬Resources
+
+
+-   [ReactJS](https://reactjs.org/docs)
+-   [Metamask](https://docs.metamask.io/guide/)
+-   [Material-UI](https://material-ui.com/)
+
+## 🎉Acknowledgement
+
+-   [Shields](https://shields.io)
+-   [Choose License for your Project](https://choosealicense.com)
+
