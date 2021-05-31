@@ -51,76 +51,80 @@ function FormContainer() {
   }, [searchTerm, marriedTerm, genderTerm, ageTerm]);
 
   return (
-    <div
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        display: 'flex',
-      }}
-    >
-      <FormControl>
-        <Input
-          type="text"
-          placeholder="Name..."
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
+    <div>
+      <div
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          display: 'flex',
+        }}
+      >
+        <FormControl>
+          <Input
+            type="text"
+            placeholder="Name..."
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
 
-        <FormControl>
-          <InputLabel id="">Select Age</InputLabel>
-          <Select
-            onChange={(event) => {
-              setAgeTerm(event.target.value);
-            }}
-          >
-            <MenuItem value=""></MenuItem>
-            <MenuItem value="22">1-25</MenuItem>
-            <MenuItem value="31">26-50</MenuItem>
-            <MenuItem value="55">51+</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl>
-          <InputLabel>Select Gender</InputLabel>
-          <Select
-            onChange={(event) => {
-              setGenderTerm(event.target.value);
-            }}
-          >
-            <MenuItem value=""></MenuItem>
-            <MenuItem value="Male">Male</MenuItem>
-            <MenuItem value="Female">Female</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl>
-          <InputLabel>Select Marital status</InputLabel>
-          <Select
-            onChange={(event) => {
-              setMarriedTerm(event.target.value);
-            }}
-          >
-            <MenuItem value=""></MenuItem>
-            <MenuItem value="true">Married</MenuItem>
-            <MenuItem value="false">Unmarried</MenuItem>
-          </Select>
-        </FormControl>
+          <FormControl>
+            <InputLabel id="">Select Age</InputLabel>
+            <Select
+              onChange={(event) => {
+                setAgeTerm(event.target.value);
+              }}
+            >
+              <MenuItem value=""></MenuItem>
+              <MenuItem value="22">1-25</MenuItem>
+              <MenuItem value="31">26-50</MenuItem>
+              <MenuItem value="55">51+</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl>
+            <InputLabel>Select Gender</InputLabel>
+            <Select
+              onChange={(event) => {
+                setGenderTerm(event.target.value);
+              }}
+            >
+              <MenuItem value=""></MenuItem>
+              <MenuItem value="Male">Male</MenuItem>
+              <MenuItem value="Female">Female</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl>
+            <InputLabel>Select Marital status</InputLabel>
+            <Select
+              onChange={(event) => {
+                setMarriedTerm(event.target.value);
+              }}
+            >
+              <MenuItem value=""></MenuItem>
+              <MenuItem value="true">Married</MenuItem>
+              <MenuItem value="false">Unmarried</MenuItem>
+            </Select>
+          </FormControl>
 
-        <Button
-          variant="outlined"
-          color="primary"
-          type="reset"
-          text="Reset"
-          onClick={() => {
-            setSearchTerm('');
-            setAgeTerm('');
-            setGenderTerm('');
-            setMarriedTerm('');
-          }}
-        >
-          Reset
-        </Button>
-      </FormControl>
-      <Datatable data={searchResults} />
+          <Button
+            variant="outlined"
+            color="primary"
+            type="reset"
+            text="Reset"
+            onClick={() => {
+              setSearchTerm('');
+              setAgeTerm('');
+              setGenderTerm('');
+              setMarriedTerm('');
+            }}
+          >
+            Reset
+          </Button>
+        </FormControl>
+      </div>
+      <div style={{ float: 'center' }}>
+        <Datatable data={searchResults} />
+      </div>
     </div>
   );
 }

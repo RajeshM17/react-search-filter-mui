@@ -96,7 +96,7 @@ export default function Datatable({ data }) {
   const classes = useStyles();
   return (
     <div
-      style={{ height: 600, width: '50%' }}
+      style={{ height: 420, width: '100%' }}
       className={classes.root}
     >
       <DataGrid
