@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomizedSnackbars({display}) {
+export default function CustomizedSnackbars({ display }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-   
+
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -30,17 +30,27 @@ export default function CustomizedSnackbars({display}) {
 
   return (
     <div className={classes.root}>
-    
-      {display?<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success">
-          Successfully connected
-        </Alert>
-      </Snackbar>:<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error">
-          Please Install Metamask!!
-        </Alert>
-      </Snackbar>}
-      }
+      {display ? (
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
+          <Alert onClose={handleClose} severity="success">
+            Successfully connected
+          </Alert>
+        </Snackbar>
+      ) : (
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+        >
+          <Alert onClose={handleClose} severity="error">
+            Please Install Metamask!!
+          </Alert>
+        </Snackbar>
+      )}
     </div>
   );
 }

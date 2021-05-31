@@ -1,5 +1,5 @@
 import './App.css';
-import BasicLayout from '../layouts/BasicLayout';
+import BasicLayout from '../Layouts/BasicLayout';
 export default function App() {
   return (
     <div className="App">

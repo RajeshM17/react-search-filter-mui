@@ -7,19 +7,12 @@
 	React Search Filter with Pagination
     <br />
 	
-    <a href="https://github.com/RajeshM17/react-search-filter-mui">View Demo</a>
-    
-
-    <a href="https://github.com/RajeshM17/react-search-filter-mui/issues">Report Bug</a>
-    
-	
-    <a href="https://github.com/RajeshM17/react-search-filter-mui/issues">Request Feature</a>
   </p>
 
 <div align="center">
 
 
-[![Status](https://img.shields.io/badge/react-search-filter-mui-Live-success?style=for-the-badge)](https://your-live-project-link.com)
+
 ![Status](https://img.shields.io/badge/status-active-success.svg?style=for-the-badge)
 [![GitHub issues](https://img.shields.io/github/issues/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/issues)
 [![GitHub forks](https://img.shields.io/github/forks/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/network)

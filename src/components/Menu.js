@@ -50,9 +50,9 @@ export default function CustomizedMenus(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
+
   return (
-    <div style={{ float: 'right'}}>
+    <div style={{ float: 'right' }}>
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
