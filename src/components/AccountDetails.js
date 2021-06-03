@@ -18,17 +18,23 @@ function AccountDetails() {
       // DO NOTHING...
     }
   };
-  async function loadBlockchainData() {
+  const loadBlockchainData = async () =>{
     const web3 = new Web3(
       Web3.givenProvider || 'http://localhost:8545',
     );
+    const accounts = await web3.eth.getAccounts();
+    if(accounts.length>0){
+    setAccount(accounts[0]);
     const networkName = await web3.eth.net.getNetworkType();
     setNetwork(networkName);
-    //fetch account
-    const accounts = await web3.eth.getAccounts();
-    setAccount(accounts[0]);
-    const WalletBalance = await web3.eth.getBalance(accounts[0]);
+
+   const WalletBalance = await web3.eth.getBalance(accounts[0]);
     setBalance(WalletBalance);
+    }
+    else
+    {
+      alert("Please login into Metamask wallet")
+    } 
   }
   useEffect(() => {
     setMetamaskInstalled(typeof window.web3 !== 'undefined');

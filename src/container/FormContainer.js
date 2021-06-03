@@ -2,22 +2,27 @@ import data from '../Data/MOCK_DATA.json';
 import React, { useState, useEffect } from 'react';
 import inRange from '../Utils/range';
 import Datatable from '../Components/Datatable';
-import {
-  Select,
-  Input,
-  FormControl,
-  MenuItem,
-  InputLabel,
-  Button,
-} from '@material-ui/core';
-
+import Control from '../Components/controls/Control';
+import { FormControl } from '@material-ui/core';
 function FormContainer() {
   const [searchTerm, setSearchTerm] = useState('');
   const [ageTerm, setAgeTerm] = useState('');
   const [genderTerm, setGenderTerm] = useState('');
   const [marriedTerm, setMarriedTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-
+  const ageOptions = [
+    { id: 1, title: '1-25' },
+    { id: 28, title: '26-50' },
+    { id: 52, title: '51+' },
+  ];
+  const genderOptions = [
+    { id: "Male", title: 'Male' },
+    { id: "Female", title: 'Female' },
+  ];
+  const maritalStatusOptions = [
+    { id: true, title: 'Married' },
+    { id: false, title: 'Unmarried' },
+  ];
   useEffect(() => {
     const results = data.filter((person) => {
       var minimum = 1,
@@ -49,7 +54,13 @@ function FormContainer() {
     setSearchResults(results);
     console.log(searchTerm);
   }, [searchTerm, marriedTerm, genderTerm, ageTerm]);
-
+  const changeState = () => {
+    console.log('in change State');
+    setSearchTerm('');
+    setAgeTerm('');
+    setGenderTerm('');
+    setMarriedTerm('');
+  };
   return (
     <div>
       <div
@@ -57,69 +68,54 @@ function FormContainer() {
           justifyContent: 'center',
           alignItems: 'center',
           display: 'flex',
+          margin: '20px',
         }}
       >
-        <FormControl>
-          <Input
-            type="text"
-            placeholder="Name..."
-            onChange={(event) => {
-              setSearchTerm(event.target.value);
-            }}
-          />
+      <FormControl>
+        <Control.Input
+          type="text"
+          placeholder="Name..."
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }}
+        />
 
-          <FormControl>
-            <InputLabel id="">Select Age</InputLabel>
-            <Select
-              onChange={(event) => {
-                setAgeTerm(event.target.value);
-              }}
-            >
-              <MenuItem value=""></MenuItem>
-              <MenuItem value="22">1-25</MenuItem>
-              <MenuItem value="31">26-50</MenuItem>
-              <MenuItem value="55">51+</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl>
-            <InputLabel>Select Gender</InputLabel>
-            <Select
-              onChange={(event) => {
-                setGenderTerm(event.target.value);
-              }}
-            >
-              <MenuItem value=""></MenuItem>
-              <MenuItem value="Male">Male</MenuItem>
-              <MenuItem value="Female">Female</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl>
-            <InputLabel>Select Marital status</InputLabel>
-            <Select
-              onChange={(event) => {
-                setMarriedTerm(event.target.value);
-              }}
-            >
-              <MenuItem value=""></MenuItem>
-              <MenuItem value="true">Married</MenuItem>
-              <MenuItem value="false">Unmarried</MenuItem>
-            </Select>
-          </FormControl>
+        <Control.Select
+          label={'Select Age'}
+          name={'Age'}
+          value={ageTerm}
+          options={ageOptions}
+          onChange={(event) => {
+            setAgeTerm(event.target.value);
+          }}
+        />
 
-          <Button
-            variant="outlined"
-            color="primary"
-            type="reset"
-            text="Reset"
-            onClick={() => {
-              setSearchTerm('');
-              setAgeTerm('');
-              setGenderTerm('');
-              setMarriedTerm('');
-            }}
-          >
-            Reset
-          </Button>
+        <Control.Select
+          label={'Select Gender'}
+          name={'gender'}
+          options={genderOptions}
+          value={genderTerm}
+          onChange={(event) => {
+            setGenderTerm(event.target.value);
+          }}
+        />
+        <Control.Select
+          label={'Select Marital Status'}
+          name={'status'}
+          options={maritalStatusOptions}
+          value={marriedTerm}
+          onChange={(event) => {
+            setMarriedTerm(event.target.value);
+          }}
+        />
+
+        <Control.Button
+          variant="outlined"
+          color="primary"
+          type="reset"
+          text="Reset"
+          onClick={() => changeState()}
+        />
         </FormControl>
       </div>
       <div style={{ float: 'center' }}>
