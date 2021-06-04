@@ -68,7 +68,6 @@ function FormContainer() {
           justifyContent: 'center',
           alignItems: 'center',
           display: 'flex',
-          margin: '20px',
         }}
       >
         <FormControl>
