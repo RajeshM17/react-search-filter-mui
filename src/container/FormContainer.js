@@ -16,8 +16,8 @@ function FormContainer() {
     { id: 52, title: '51+' },
   ];
   const genderOptions = [
-    { id: "Male", title: 'Male' },
-    { id: "Female", title: 'Female' },
+    { id: 'Male', title: 'Male' },
+    { id: 'Female', title: 'Female' },
   ];
   const maritalStatusOptions = [
     { id: true, title: 'Married' },
@@ -71,51 +71,51 @@ function FormContainer() {
           margin: '20px',
         }}
       >
-      <FormControl>
-        <Control.Input
-          type="text"
-          placeholder="Name..."
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
+        <FormControl>
+          <Control.Input
+            type="text"
+            placeholder="Name..."
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
 
-        <Control.Select
-          label={'Select Age'}
-          name={'Age'}
-          value={ageTerm}
-          options={ageOptions}
-          onChange={(event) => {
-            setAgeTerm(event.target.value);
-          }}
-        />
+          <Control.Select
+            label={'Select Age'}
+            name={'Age'}
+            value={ageTerm}
+            options={ageOptions}
+            onChange={(event) => {
+              setAgeTerm(event.target.value);
+            }}
+          />
 
-        <Control.Select
-          label={'Select Gender'}
-          name={'gender'}
-          options={genderOptions}
-          value={genderTerm}
-          onChange={(event) => {
-            setGenderTerm(event.target.value);
-          }}
-        />
-        <Control.Select
-          label={'Select Marital Status'}
-          name={'status'}
-          options={maritalStatusOptions}
-          value={marriedTerm}
-          onChange={(event) => {
-            setMarriedTerm(event.target.value);
-          }}
-        />
+          <Control.Select
+            label={'Select Gender'}
+            name={'gender'}
+            options={genderOptions}
+            value={genderTerm}
+            onChange={(event) => {
+              setGenderTerm(event.target.value);
+            }}
+          />
+          <Control.Select
+            label={'Select Marital Status'}
+            name={'status'}
+            options={maritalStatusOptions}
+            value={marriedTerm}
+            onChange={(event) => {
+              setMarriedTerm(event.target.value);
+            }}
+          />
 
-        <Control.Button
-          variant="outlined"
-          color="primary"
-          type="reset"
-          text="Reset"
-          onClick={() => changeState()}
-        />
+          <Control.Button
+            variant="outlined"
+            color="primary"
+            type="reset"
+            text="Reset"
+            onClick={() => changeState()}
+          />
         </FormControl>
       </div>
       <div style={{ float: 'center' }}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import ListItemText from '@material-ui/core/ListItemText';
 import { StyledMenu, StyledMenuItem } from './index.js';
 export default function CustomizedMenus(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -31,15 +30,9 @@ export default function CustomizedMenus(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>
-          <ListItemText primary={props.account} />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary={props.network} />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary={props.balance} />
-        </StyledMenuItem>
+        <StyledMenuItem>{props.account}</StyledMenuItem>
+        <StyledMenuItem>{props.network}</StyledMenuItem>
+        <StyledMenuItem>{props.balance}</StyledMenuItem>
       </StyledMenu>
     </div>
   );
