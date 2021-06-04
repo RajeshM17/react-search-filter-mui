@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Web3 from 'web3';
-import CustomizedMenus from './Menu';
+import CustomizedMenus from './Menu/Menu';
 import CustomizedSnackbars from './SnackbarAlert';
 function AccountDetails() {
   const [metamaskInstalled, setMetamaskInstalled] = useState(false);
@@ -24,6 +24,7 @@ function AccountDetails() {
     );
     const accounts = await web3.eth.getAccounts();
     if(accounts.length>0){
+      console.log("login successfull")
     setAccount(accounts[0]);
     const networkName = await web3.eth.net.getNetworkType();
     setNetwork(networkName);

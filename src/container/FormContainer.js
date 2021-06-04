@@ -1,7 +1,7 @@
 import data from '../Data/MOCK_DATA.json';
 import React, { useState, useEffect } from 'react';
 import inRange from '../Utils/range';
-import Datatable from '../Components/Datatable';
+import Datatable from '../Components/Datatable/Datatable';
 import Control from '../Components/controls/Control';
 import { FormControl } from '@material-ui/core';
 function FormContainer() {
