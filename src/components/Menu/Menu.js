@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import { StyledMenu, StyledMenuItem } from './index.js';
 export default function CustomizedMenus(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const { menuName, ...other } = props;
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -11,28 +12,29 @@ export default function CustomizedMenus(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   return (
     <div style={{ float: 'right' }}>
       <Button
-        aria-controls="customized-menu"
+        aria-controls="Wallet-Menu"
         aria-haspopup="true"
         variant="contained"
         color="primary"
         onClick={handleClick}
       >
-        Account Section
+        {menuName}
       </Button>
       <StyledMenu
-        id="customized-menu"
+        id="Wallet-Menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>{props.account}</StyledMenuItem>
-        <StyledMenuItem>{props.network}</StyledMenuItem>
-        <StyledMenuItem>{props.balance}</StyledMenuItem>
+        {Object.entries(other).map(([key, value]) => (
+          <StyledMenuItem key={key} value={value}>
+            {key.toUpperCase()}:{value}
+          </StyledMenuItem>
+        ))}
       </StyledMenu>
     </div>
   );

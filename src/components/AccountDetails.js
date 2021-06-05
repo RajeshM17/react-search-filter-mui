@@ -7,6 +7,7 @@ function AccountDetails() {
   const [account, setAccount] = useState('');
   const [network, setNetwork] = useState('');
   const [balance, setBalance] = useState('');
+  const menuName="Account Details";
 
   const loadWeb3 = async () => {
     if (window.ethereum) {
@@ -50,6 +51,7 @@ function AccountDetails() {
         <>
           <CustomizedSnackbars display={metamaskInstalled} />
           <CustomizedMenus
+            menuName={menuName}
             account={account}
             balance={balance}
             network={network}
