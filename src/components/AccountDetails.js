@@ -1,39 +1,31 @@
 import { useState, useEffect } from 'react';
 import Web3 from 'web3';
+import { loadWeb3 } from '../Utils/loadWeb3';
 import CustomizedMenus from './Menu/Menu';
-import CustomizedSnackbars from './Menu/SnackbarAlert/SnackbarAlert';
-function AccountDetails() {
+import { CustomizedSnackbars } from './Menu/SnackbarAlert/SnackbarAlert';
+const AccountDetails = () => {
   const [metamaskInstalled, setMetamaskInstalled] = useState(false);
   const [account, setAccount] = useState('');
   const [network, setNetwork] = useState('');
   const [balance, setBalance] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
   const menuName = 'Account Details';
 
-  const loadWeb3 = async () => {
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum);
-      await window.ethereum.enable();
-    } else if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider);
-    } else {
-      // DO NOTHING...
-    }
-  };
   const loadBlockchainData = async () => {
     const web3 = new Web3(
       Web3.givenProvider || 'http://localhost:8545',
     );
     const accounts = await web3.eth.getAccounts();
     if (accounts.length > 0) {
-      console.log('login successfull');
       setAccount(accounts[0]);
       const networkName = await web3.eth.net.getNetworkType();
       setNetwork(networkName);
 
       const WalletBalance = await web3.eth.getBalance(accounts[0]);
       setBalance(WalletBalance);
+      setLoggedIn(true);
     } else {
-      alert('Please login into Metamask wallet');
+      setLoggedIn(false);
     }
   };
   useEffect(() => {
@@ -42,15 +34,16 @@ function AccountDetails() {
       loadWeb3();
       loadBlockchainData();
     }
-  }, [metamaskInstalled]);
+  }, [metamaskInstalled, loggedIn]);
   return (
     <>
-      {metamaskInstalled ? (
+      {loggedIn ? (
         <>
           <CustomizedSnackbars
-            display={metamaskInstalled}
+            display={loggedIn}
             severity="success"
-            message="Metamask Installed"
+            message="Successfully logged In"
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
           />
           <CustomizedMenus
             menuName={menuName}
@@ -61,13 +54,29 @@ function AccountDetails() {
         </>
       ) : (
         <CustomizedSnackbars
+          display={loggedIn}
+          severity="error"
+          message="Please Login into Metamask"
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        />
+      )}
+      {metamaskInstalled ? (
+        <CustomizedSnackbars
+          display={metamaskInstalled}
+          severity="success"
+          message="Metamask is already Installed"
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        />
+      ) : (
+        <CustomizedSnackbars
           display={metamaskInstalled}
           severity="error"
           message="Please install Metamask"
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         />
       )}
     </>
   );
-}
+};
 
 export default AccountDetails;
