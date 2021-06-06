@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/react-search-filter-mui/static/css/main.87d098f6.chunk.css",
-    "main.js": "/react-search-filter-mui/static/js/main.f59e79b4.chunk.js",
-    "main.js.map": "/react-search-filter-mui/static/js/main.f59e79b4.chunk.js.map",
+    "main.js": "/react-search-filter-mui/static/js/main.da855959.chunk.js",
+    "main.js.map": "/react-search-filter-mui/static/js/main.da855959.chunk.js.map",
     "runtime-main.js": "/react-search-filter-mui/static/js/runtime-main.fdcc4ad6.js",
     "runtime-main.js.map": "/react-search-filter-mui/static/js/runtime-main.fdcc4ad6.js.map",
-    "static/js/2.66fcc742.chunk.js": "/react-search-filter-mui/static/js/2.66fcc742.chunk.js",
-    "static/js/2.66fcc742.chunk.js.map": "/react-search-filter-mui/static/js/2.66fcc742.chunk.js.map",
+    "static/js/2.c1fb1b96.chunk.js": "/react-search-filter-mui/static/js/2.c1fb1b96.chunk.js",
+    "static/js/2.c1fb1b96.chunk.js.map": "/react-search-filter-mui/static/js/2.c1fb1b96.chunk.js.map",
     "index.html": "/react-search-filter-mui/index.html",
     "static/css/main.87d098f6.chunk.css.map": "/react-search-filter-mui/static/css/main.87d098f6.chunk.css.map",
-    "static/js/2.66fcc742.chunk.js.LICENSE.txt": "/react-search-filter-mui/static/js/2.66fcc742.chunk.js.LICENSE.txt"
+    "static/js/2.c1fb1b96.chunk.js.LICENSE.txt": "/react-search-filter-mui/static/js/2.c1fb1b96.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fdcc4ad6.js",
-    "static/js/2.66fcc742.chunk.js",
+    "static/js/2.c1fb1b96.chunk.js",
     "static/css/main.87d098f6.chunk.css",
-    "static/js/main.f59e79b4.chunk.js"
+    "static/js/main.da855959.chunk.js"
   ]
 }
