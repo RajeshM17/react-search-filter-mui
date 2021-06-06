@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { StyledMenu, StyledMenuItem } from './index.js';
-export default function CustomizedMenus(props) {
+ const CustomizedMenus=(props)=> {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { menuName, ...other } = props;
 
@@ -39,3 +39,4 @@ export default function CustomizedMenus(props) {
     </div>
   );
 }
+export default CustomizedMenus;

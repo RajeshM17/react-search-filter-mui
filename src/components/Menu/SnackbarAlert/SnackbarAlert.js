@@ -1,24 +1,12 @@
 import React from 'react';
 import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
-import { makeStyles } from '@material-ui/core/styles';
+import { useStyles } from './index';
+import { Alert } from './Alert';
 
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    '& > * + *': {
-      marginTop: theme.spacing(2),
-    },
-  },
-}));
-
-export default function CustomizedSnackbars({ display }) {
+export default function CustomizedSnackbars(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  const { display, severity, message } = props;
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -35,9 +23,11 @@ export default function CustomizedSnackbars({ display }) {
           open={open}
           autoHideDuration={6000}
           onClose={handleClose}
+          severity={severity}
+          message={message}
         >
-          <Alert onClose={handleClose} severity="success">
-            Successfully connected
+          <Alert onClose={handleClose} severity={severity}>
+            {message}
           </Alert>
         </Snackbar>
       ) : (
@@ -46,8 +36,8 @@ export default function CustomizedSnackbars({ display }) {
           autoHideDuration={6000}
           onClose={handleClose}
         >
-          <Alert onClose={handleClose} severity="error">
-            Please Install Metamask!!
+          <Alert onClose={handleClose} severity={severity}>
+            {message}
           </Alert>
         </Snackbar>
       )}
