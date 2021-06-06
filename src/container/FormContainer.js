@@ -24,22 +24,27 @@ const FormContainer = () => {
     { id: false, title: 'Unmarried' },
   ];
   useEffect(() => {
-    const results = data.filter((person) => {
-      const [minimum, maximum] = miniMax(ageTerm);
-      return (
-        person.name
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase()) &&
-        person.age >= minimum &&
-        person.age <= maximum &&
-        person.gender
-          .toString()
-          .toLowerCase()
-          .startsWith(genderTerm.toLowerCase()) &&
-        person.isMarried.toString().includes(marriedTerm)
-      );
-    });
-    setSearchResults(results);
+    try {
+      const results = data.filter((person) => {
+        const [minimum, maximum] = miniMax(ageTerm);
+        return (
+          person.name
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) &&
+          person.age >= minimum &&
+          person.age <= maximum &&
+          person.gender
+            .toString()
+            .toLowerCase()
+            .startsWith(genderTerm.toLowerCase()) &&
+          person.isMarried.toString().includes(marriedTerm)
+        );
+      });
+
+      setSearchResults(results);
+    } catch (error) {
+      console.error(error);
+    }
   }, [searchTerm, marriedTerm, genderTerm, ageTerm]);
 
   const changeState = () => {

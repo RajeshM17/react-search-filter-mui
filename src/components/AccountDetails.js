@@ -12,20 +12,25 @@ const AccountDetails = () => {
   const menuName = 'Account Details';
 
   const loadBlockchainData = async () => {
-    const web3 = new Web3(
-      Web3.givenProvider || 'http://localhost:8545',
-    );
-    const accounts = await web3.eth.getAccounts();
-    if (accounts.length > 0) {
-      setAccount(accounts[0]);
-      const networkName = await web3.eth.net.getNetworkType();
-      setNetwork(networkName);
+    try {
+      const web3 = new Web3(
+        Web3.givenProvider || 'http://localhost:8545',
+      );
 
-      const WalletBalance = await web3.eth.getBalance(accounts[0]);
-      setBalance(WalletBalance);
-      setLoggedIn(true);
-    } else {
-      setLoggedIn(false);
+      const accounts = await web3.eth.getAccounts();
+      if (accounts.length > 0) {
+        setAccount(accounts[0]);
+        const networkName = await web3.eth.net.getNetworkType();
+        setNetwork(networkName);
+
+        const WalletBalance = await web3.eth.getBalance(accounts[0]);
+        setBalance(WalletBalance);
+        setLoggedIn(true);
+      } else {
+        setLoggedIn(false);
+      }
+    } catch (error) {
+      console.log(error.message);
     }
   };
   useEffect(() => {
@@ -34,9 +39,24 @@ const AccountDetails = () => {
       loadWeb3();
       loadBlockchainData();
     }
-  }, [metamaskInstalled, loggedIn]);
+  }, [metamaskInstalled]);
   return (
     <>
+      {metamaskInstalled ? (
+        <CustomizedSnackbars
+          display={metamaskInstalled}
+          severity="success"
+          message="Metamask is already Installed"
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        />
+      ) : (
+        <CustomizedSnackbars
+          display={metamaskInstalled}
+          severity="error"
+          message="Please install Metamask"
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        />
+      )}
       {loggedIn ? (
         <>
           <CustomizedSnackbars
@@ -58,21 +78,6 @@ const AccountDetails = () => {
           severity="error"
           message="Please Login into Metamask"
           anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        />
-      )}
-      {metamaskInstalled ? (
-        <CustomizedSnackbars
-          display={metamaskInstalled}
-          severity="success"
-          message="Metamask is already Installed"
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        />
-      ) : (
-        <CustomizedSnackbars
-          display={metamaskInstalled}
-          severity="error"
-          message="Please install Metamask"
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         />
       )}
     </>
