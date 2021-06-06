@@ -5,7 +5,6 @@
  <p align="center">
  	
 	React Search Filter with Pagination
-    <br />
 	
   </p>
 
