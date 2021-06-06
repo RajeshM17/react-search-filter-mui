@@ -4,6 +4,7 @@ import Datatable from '../Components/Datatable/Datatable';
 import Control from '../Components/controls/Control';
 import { miniMax } from '../Utils/miniMax';
 import { FormControl } from '@material-ui/core';
+import { columns } from './columns';
 const FormContainer = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [ageTerm, setAgeTerm] = useState('');
@@ -111,7 +112,11 @@ const FormContainer = () => {
         </FormControl>
       </div>
       <div style={{ float: 'center' }}>
-        <Datatable data={searchResults} />
+        <Datatable
+          rows={searchResults}
+          columns={columns}
+          pageSize={10}
+        />
       </div>
     </>
   );

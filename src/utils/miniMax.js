@@ -1,6 +1,6 @@
-import inRange from './range'
+import inRange from './range';
 export const miniMax = (ageTerm) => {
-    var minimum = 1,
+  var minimum = 1,
     maximum = 150;
 
   if (inRange(ageTerm, 1, 25)) {
@@ -13,7 +13,5 @@ export const miniMax = (ageTerm) => {
     minimum = 51;
     maximum = 150;
   }
-    return [minimum,maximum];   
-  };
-  
-  
+  return [minimum, maximum];
+};

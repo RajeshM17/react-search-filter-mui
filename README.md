@@ -1,5 +1,3 @@
-
-
 <h1 align="center">react-search-filter-mui</h1>
 
  <p align="center">
@@ -10,8 +8,6 @@
 
 <div align="center">
 
-
-
 ![Status](https://img.shields.io/badge/status-active-success.svg?style=for-the-badge)
 [![GitHub issues](https://img.shields.io/github/issues/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/issues)
 [![GitHub forks](https://img.shields.io/github/forks/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui/network)
@@ -20,8 +16,6 @@
 [![GitHub license](https://img.shields.io/github/license/RajeshM17/react-search-filter-mui?style=for-the-badge)](https://github.com/RajeshM17/react-search-filter-mui)
 
 </div>
-
-
 
 <hr />
 
@@ -43,9 +37,9 @@ React search filter and pagination with Material-UI
 
 ## ⛏️Built with
 
--   [ReactJS]()
--   [Material-UI]()
--   [Metamask Wallet]()
+- [ReactJS]()
+- [Material-UI]()
+- [Metamask Wallet]()
 
 ## 🏁Getting Started
 
@@ -53,49 +47,43 @@ These instructions will help you to setup your own copy of react-search-filter-m
 
 ### 📚Prerequisite
 
--   [Node]()
--   [NPM]()
+- [Node]()
+- [NPM]()
 
 ### 🧰Installation
 
 1. [Clone this repo]()
 2. [Install all the dependencies]()
 
-    ```bash
-    $npm install
-    ```
+   ```bash
+   $npm install
+   ```
 
-1. `$npm start`
+3. `$npm start`
 
 ## 🚀Deployment
 
 1. [Create a new repo]()
 1. [Push your code to it]()
-3. [Create New Project on your [Vercel Dashboard](https://vercel.com/dashboard)]()
-4. [Import your Git Repository]()
-5. [After successful import, changes made to the Production Branch (commonly "main/master") will be a Production Deployment and rest all branches will generate Preview Deployments]()
-6. [Once deployed, you will get a URL for your live app, such as: `https://xyz.vercel.app`]()
+1. [Create New Project on your [Vercel Dashboard](https://vercel.com/dashboard)]()
+1. [Import your Git Repository]()
+1. [After successful import, changes made to the Production Branch (commonly "main/master") will be a Production Deployment and rest all branches will generate Preview Deployments]()
+1. [Once deployed, you will get a URL for your live app, such as: `https://xyz.vercel.app`]()
 
 ## 📝Todo
 
--   [Adding styles]()
--   [Making reusable components]()
+- [Adding styles]()
+- [Making reusable components]()
 
 ## 📈Future Plans
 
--   [Making it a Dapp]()
-
-
+- [Making it a Dapp]()
 
 ## ✍️Authors
 
-
-
--   [@author_name](profile link) 
+- [@RajeshM17]()
 
 ## 📖Contributing
-
-
 
 **_"In real open source, you have the right to control your own destiny."_** _- Linus Torvalds_
 
@@ -103,8 +91,8 @@ Contributions are what make the open source community an amazing place. Any cont
 
 ## 📢Contributors
 
--   [@ameesha_agrawal]()
--   [@vaishali_purohit]()
+- [@ameesha_agrawal]()
+- [@vaishali_purohit]()
 
 ## 💳License
 
@@ -112,13 +100,11 @@ Distributed under the MIT License. See [`LICENSE`](LICENCE) for more information
 
 ## 🧬Resources
 
-
--   [ReactJS](https://reactjs.org/docs)
--   [Metamask](https://docs.metamask.io/guide/)
--   [Material-UI](https://material-ui.com/)
+- [ReactJS](https://reactjs.org/docs)
+- [Metamask](https://docs.metamask.io/guide/)
+- [Material-UI](https://material-ui.com/)
 
 ## 🎉Acknowledgement
 
--   [Shields](https://shields.io)
--   [Choose License for your Project](https://choosealicense.com)
-
+- [Shields](https://shields.io)
+- [Choose License for your Project](https://choosealicense.com)

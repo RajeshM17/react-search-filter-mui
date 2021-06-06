@@ -6,7 +6,7 @@ import { Alert } from './Alert';
 export const CustomizedSnackbars = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-  const { severity, message,anchorOrigin } = props;
+  const { severity, message, anchorOrigin } = props;
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
