@@ -1,7 +1,7 @@
 import { DataGrid, GridToolbar } from '@material-ui/data-grid';
 import useStyles from './index';
 
-export default function Datatable(props) {
+const Datatable = (props) => {
   const { rows, columns, pageSize } = props;
   const classes = useStyles();
   return (
@@ -20,4 +20,5 @@ export default function Datatable(props) {
       />
     </div>
   );
-}
+};
+export default Datatable;

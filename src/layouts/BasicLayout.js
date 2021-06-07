@@ -1,6 +1,6 @@
 import FormContainer from '../container/FormContainer';
 import AccountDetails from '../Components/AccountDetails';
-export default function BasicLayout() {
+export const BasicLayout = () => {
   return (
     <div className="BasicLayout">
       <h1>Displaying Dynamic Data with Filtering from json file</h1>
@@ -8,4 +8,4 @@ export default function BasicLayout() {
       <FormContainer />
     </div>
   );
-}
+};
